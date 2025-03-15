@@ -1,4 +1,4 @@
-package com.thalesssribeiro.soulslike_sp;
+package com.kaikeventura.soulslike_sp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

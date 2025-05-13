@@ -17,7 +17,6 @@ public class CharacterController {
     private final CharacterService characterService;
     @PostMapping
     public CharacterResponseDto createCharacter(@RequestBody CharacterRequestDto characterRequestDto){
-
         return characterService.createNewCharacter(characterRequestDto);
     }
 }

@@ -25,4 +25,14 @@ public class CharacterService {
         return new CharacterResponseDto(characterSaved.getId());
 
     }
+
+    public CharactersDBO findById(Long characterID){
+        var character = characterRepository.findById(characterID);
+
+        if (character.isPresent()){
+            return character.get();
+        }
+
+        throw new RuntimeException("Usuario não encontrado");
+    }
 }

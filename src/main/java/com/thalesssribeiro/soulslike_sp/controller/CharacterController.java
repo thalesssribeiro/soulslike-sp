@@ -1,7 +1,7 @@
 package com.thalesssribeiro.soulslike_sp.controller;
 
-import com.thalesssribeiro.soulslike_sp.dto.CharacterRequestDto;
-import com.thalesssribeiro.soulslike_sp.dto.CharacterResponseDto;
+import com.thalesssribeiro.soulslike_sp.dto.CharacterRequestDTO;
+import com.thalesssribeiro.soulslike_sp.dto.CharacterResponseDTO;
 import com.thalesssribeiro.soulslike_sp.service.CharacterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ public class CharacterController {
 
     private final CharacterService characterService;
     @PostMapping
-    public CharacterResponseDto createCharacter(@RequestBody CharacterRequestDto characterRequestDto){
+    public CharacterResponseDTO createCharacter(@RequestBody CharacterRequestDTO characterRequestDto){
         return characterService.createNewCharacter(characterRequestDto);
     }
 }

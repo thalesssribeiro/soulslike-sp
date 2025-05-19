@@ -1,5 +1,5 @@
 package com.thalesssribeiro.soulslike_sp.dto;
-public record CharacterRequestDto(
+public record CharacterRequestDTO(
         String name,
         String bodyType,
         String clazz

@@ -1,8 +1,8 @@
 package com.thalesssribeiro.soulslike_sp.service;
 
 import com.thalesssribeiro.soulslike_sp.dbo.CharactersDBO;
-import com.thalesssribeiro.soulslike_sp.dto.CharacterRequestDto;
-import com.thalesssribeiro.soulslike_sp.dto.CharacterResponseDto;
+import com.thalesssribeiro.soulslike_sp.dto.CharacterRequestDTO;
+import com.thalesssribeiro.soulslike_sp.dto.CharacterResponseDTO;
 import com.thalesssribeiro.soulslike_sp.repository.CharacterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class CharacterService {
 
     private final CharacterRepository characterRepository;
-    public CharacterResponseDto createNewCharacter(CharacterRequestDto characterRequestDto){
+    public CharacterResponseDTO createNewCharacter(CharacterRequestDTO characterRequestDto){
 
         var characterSaved = characterRepository.save(
                 new CharactersDBO(
@@ -22,7 +22,7 @@ public class CharacterService {
                 )
         );
 
-        return new CharacterResponseDto(characterSaved.getId());
+        return new CharacterResponseDTO(characterSaved.getId());
 
     }
 

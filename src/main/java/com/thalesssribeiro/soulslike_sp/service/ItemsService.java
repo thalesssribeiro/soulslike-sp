@@ -1,5 +1,6 @@
 package com.thalesssribeiro.soulslike_sp.service;
 
+import com.thalesssribeiro.soulslike_sp.dbo.CharactersDBO;
 import com.thalesssribeiro.soulslike_sp.dbo.ItemsDBO;
 import com.thalesssribeiro.soulslike_sp.dto.ItemsRequestDTO;
 import com.thalesssribeiro.soulslike_sp.dto.ItemsResponseDTO;
@@ -21,5 +22,15 @@ public class ItemsService {
                 )
         );
         return new ItemsResponseDTO(itemsSaved.getId());
+    }
+
+    public ItemsDBO findById(Long itemId){
+        var item = itemsRepository.findById(itemId);
+
+        if (item.isPresent()){
+            return item.get();
+        }
+
+        throw new RuntimeException("Usuario não encontrado");
     }
 }

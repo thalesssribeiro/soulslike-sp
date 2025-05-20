@@ -2,6 +2,9 @@ package com.thalesssribeiro.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +12,9 @@ import java.util.List;
 @Entity
 @Getter
 @Table(name = "items")
+@ToString
+@NoArgsConstructor
+@Setter
 public class ItemsDBO {
 
     public ItemsDBO(String name, String type) {

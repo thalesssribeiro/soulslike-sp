@@ -1,8 +1,10 @@
 package com.thalesssribeiro.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "item_actions")
 public class ItemActionsDBO {
 
@@ -25,5 +27,11 @@ public class ItemActionsDBO {
     @JoinColumn(name = "item_id", referencedColumnName = "id")
     private ItemsDBO itemsDBO;
 
-
+    public ItemActionsDBO(Boolean isInfinite, Boolean isUsable, Boolean isDrop, Boolean action, ItemsDBO itemsDBO) {
+        this.isInfinite = isInfinite;
+        this.isUsable = isUsable;
+        this.isDrop = isDrop;
+        this.action = action;
+        this.itemsDBO = itemsDBO;
+    }
 }

@@ -1,11 +1,13 @@
 package com.thalesssribeiro.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "attribute_points")
 @NoArgsConstructor
+@Getter
 public class AttributePointsDBO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

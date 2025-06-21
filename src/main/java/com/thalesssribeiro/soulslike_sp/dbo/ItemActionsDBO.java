@@ -1,9 +1,11 @@
 package com.thalesssribeiro.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Getter
 @NoArgsConstructor
 @Table(name = "item_actions")
 public class ItemActionsDBO {

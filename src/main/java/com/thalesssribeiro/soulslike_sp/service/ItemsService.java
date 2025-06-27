@@ -1,6 +1,5 @@
 package com.thalesssribeiro.soulslike_sp.service;
 
-import com.thalesssribeiro.soulslike_sp.dbo.CharactersDBO;
 import com.thalesssribeiro.soulslike_sp.dbo.ItemsDBO;
 import com.thalesssribeiro.soulslike_sp.dto.ItemsRequestDTO;
 import com.thalesssribeiro.soulslike_sp.dto.ItemsResponseDTO;

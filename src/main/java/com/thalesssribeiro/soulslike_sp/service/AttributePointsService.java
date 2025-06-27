@@ -1,7 +1,6 @@
 package com.thalesssribeiro.soulslike_sp.service;
 
 import com.thalesssribeiro.soulslike_sp.dbo.AttributePointsDBO;
-import com.thalesssribeiro.soulslike_sp.dbo.CharactersDBO;
 import com.thalesssribeiro.soulslike_sp.dto.AttributePointsRequestDTO;
 import com.thalesssribeiro.soulslike_sp.repository.AttributePointRepository;
 import org.springframework.stereotype.Service;
